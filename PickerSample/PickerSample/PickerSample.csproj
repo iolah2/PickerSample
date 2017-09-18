@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{75C10E49-0EE6-4703-B5FD-6CF11E4516FF}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PickerSample</RootNamespace>
+    <AssemblyName>PickerSample</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>11443</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>12087</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="CountryPickerBind">
+      <HintPath>..\..\CountryPickerBind\CountryPickerBind\bin\Debug\CountryPickerBind.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CountryPicker.bundle\AC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AQ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AX.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\AZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BB.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BJ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BQ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\BZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CX.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\CZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DJ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\DZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\EC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\EE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\EG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\EH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ER.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ES.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ET.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FJ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\FX.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GB.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GP.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GQ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\GY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\HU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ID.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IQ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\IT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\JE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\JM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\JO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\JP.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KP.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\KZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LB.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\LY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ME.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ML.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MP.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MQ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MX.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\MZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NP.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\NZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\OM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\PY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\QA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\RE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\RO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\RS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\RU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\RW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SB.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SJ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ST.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SX.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\SZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TD.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TH.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TJ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TL.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TO.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TR.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TV.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TW.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\TZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\UA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\UG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\UM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\US.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\UY.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\UZ.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VC.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VG.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VI.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VN.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\VU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\WF.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\WS.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\XK.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\YE.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\YT.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\YU.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ZA.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ZM.png" />
+    <BundleResource Include="Resources\CountryPicker.bundle\ZW.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
