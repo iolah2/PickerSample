@@ -1,0 +1,5 @@
+/Users/ColeXm/Desktop/CountryPickerBind/CountryPickerBind/obj/Debug/CountryPickerBind.csproj.CoreCompileInputs.cache
+/Users/ColeXm/Desktop/CountryPickerBind/CountryPickerBind/bin/Debug/CountryPickerBind.dll
+/Users/ColeXm/Desktop/CountryPickerBind/CountryPickerBind/bin/Debug/CountryPickerBind.pdb
+/Users/ColeXm/Desktop/CountryPickerBind/CountryPickerBind/obj/Debug/CountryPickerBind.dll
+/Users/ColeXm/Desktop/CountryPickerBind/CountryPickerBind/obj/Debug/CountryPickerBind.pdb
